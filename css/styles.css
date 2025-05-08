@@ -68,6 +68,12 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+  gap: 20px;
+}
+
+.header-left-btn {
+  margin-right: auto;
+  z-index: 2;
 }
 
 .site-title {
@@ -83,10 +89,7 @@ h1, h2, h3 {
   margin: 0;
   width: max-content;
   z-index: 1;
-}
-
-.header-left-btn {
-  margin-right: 0;
+  pointer-events: none;
 }
 
 .header-theme-toggle {
@@ -516,14 +519,24 @@ body.dark-mode .date {
   }
   
   .header-wrapper {
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
-  #site-title-centered {
-    position: static;
-    transform: none;
+  .header-left-btn {
+    order: -1;
+    width: 100%;
     text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .site-title {
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    order: 1;
   }
   
   .nav-actions {
